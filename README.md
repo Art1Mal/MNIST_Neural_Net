@@ -1,3 +1,4 @@
+# 🤖🧠 Neural Network Project
 # MNIST_Neural_Net
 "A TensorFlow-based neural network for classifying handwritten digits from the MNIST dataset."
 This repository contains a TensorFlow implementation of a neural network for classifying handwritten digits (0-9) from the MNIST dataset. The project demonstrates key concepts in deep learning, such as data preprocessing, model architecture design, and regularization.
