@@ -1,4 +1,3 @@
-![Project image](https://github.com/Art1Mal/MNIST_Neural_Net/blob/main/images/neural-network-icon-13.png?raw=true)
 # 🤖🧠 Neural Network Practice
 # MNIST_Neural_Net
 "A TensorFlow-based neural network for classifying handwritten digits from the MNIST dataset."
