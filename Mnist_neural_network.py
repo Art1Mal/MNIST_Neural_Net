@@ -71,24 +71,23 @@ ds_test = ds_test.prefetch(tf.data.AUTOTUNE)
 layers = [
     tf.keras.layers.Flatten(input_shape=image_shape),  # Flatten the input (28x28 images -> 784 vector)
     tf.keras.layers.Dense(94, kernel_regularizer=tf.keras.regularizers.l2(0.0001)),  # Dense layer with L2 regularization
-    tf.keras.layers.BatchNormalization(),  # Batch normalization for stable training
-    tf.keras.layers.Dropout(0.1),  # Dropout to prevent overfitting
     tf.keras.layers.Activation('relu'),  # Leaky ReLU activation for non-linearity
+    tf.keras.layers.Dropout(0.1),  # Dropout to prevent overfitting
     ##################################################################################
     tf.keras.layers.Dense(49, kernel_regularizer=tf.keras.regularizers.l2(0.0004)),
-    tf.keras.layers.Dropout(0.2),
     tf.keras.layers.BatchNormalization(),
     tf.keras.layers.Activation('relu'),
+    tf.keras.layers.Dropout(0.2),
     ##################################################################################
     tf.keras.layers.Dense(81, kernel_regularizer=tf.keras.regularizers.l2(0.008)),
-    tf.keras.layers.Dropout(0.25),
     tf.keras.layers.BatchNormalization(),
     tf.keras.layers.Activation('relu'),
+    tf.keras.layers.Dropout(0.25),
     ##################################################################################
     tf.keras.layers.Dense(33, kernel_regularizer=tf.keras.regularizers.l2(0.003)),
-    tf.keras.layers.Dropout(0.1),
     tf.keras.layers.BatchNormalization(),
     tf.keras.layers.Activation('relu'),
+    tf.keras.layers.Dropout(0.1),
     ##################################################################################
     tf.keras.layers.Dense(num_of_classes),  # Output layer with one node per class
     tf.keras.layers.Softmax()  # Softmax's activation for probabilistic class outputs
